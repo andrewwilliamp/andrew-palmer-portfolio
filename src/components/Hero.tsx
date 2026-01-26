@@ -5,7 +5,7 @@ export const Hero = () => {
     <section className="pt-20 pb-16 sm:pt-32 sm:pb-24 bg-gradient-to-br from-primary-50 to-blue-50">
       <div className="section-container text-center">
         <img
-          src="src/assets/selfie.png"
+          src="src/photos/selfie.png"
           alt="Andrew Palmer"
           className="w-48 h-48 rounded-full border-4 border-primary-300 object-cover mx-auto mb-8 shadow-lg"
         />
