@@ -4,6 +4,7 @@ import { About } from './About';
 import { Experience } from './Experience';
 import { Education } from './Education';
 import { Skills } from './Skills';
+import { ChatWidget } from './ChatWidget';
 import { Footer } from './Footer';
 
 export const App = () => {
@@ -18,6 +19,7 @@ export const App = () => {
         <Skills />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 };
