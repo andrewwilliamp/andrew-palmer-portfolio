@@ -6,6 +6,7 @@ A professional portfolio website showcasing education, experience, and technical
 
 - **Responsive Design**: Mobile-first approach with smooth interactions
 - **Modern Stack**: React 18, TypeScript, Vite, Tailwind CSS
+- **AI Chat Widget**: Floating chat assistant powered by Google Gemini API for answering questions about Andrew's background
 - **Clean Architecture**: Modular components with clear separation of concerns
 - **Professional Styling**: Custom Tailwind configuration with consistent branding
 - **Fast Performance**: Optimized build with Vite for quick load times
@@ -22,6 +23,7 @@ src/
 │   ├── Experience.tsx  # Work experience section
 │   ├── Education.tsx   # Education section
 │   ├── Skills.tsx      # Skills section
+│   ├── ChatWidget.tsx  # Floating AI chat assistant
 │   └── Footer.tsx      # Footer with contact info
 ├── data.ts             # Centralized data (experiences, education, skills)
 ├── index.css           # Global styles with Tailwind
@@ -32,6 +34,7 @@ Configuration Files:
 ├── tailwind.config.ts  # Tailwind CSS configuration
 ├── tsconfig.json       # TypeScript configuration
 ├── postcss.config.js   # PostCSS configuration
+├── .env.local          # Environment variables (Gemini API key)
 └── package.json        # Dependencies and scripts
 ```
 
@@ -46,7 +49,17 @@ Configuration Files:
 
 ```bash
 npm install
+```Environment Setup
+
+Create a `.env.local` file in the root directory with your Google Gemini API key:
+
 ```
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+Get your free API key at [Google AI Studio](https://makersuite.google.com/app/apikey).
+
+### 
 
 ### Development
 
@@ -60,7 +73,22 @@ The development server will start at `http://localhost:5173`
 
 ```bash
 npm run build
-```
+```AI Chat Widget
+
+The portfolio includes an intelligent chat widget powered by Google's Gemini API. Visitors can:
+
+- Click the floating 💬 button in the bottom right corner
+- Ask questions about Andrew's background, experience, skills, and education
+- Receive AI-generated responses based on resume data
+- Enjoy a seamless conversational interface
+
+The chat assistant:
+- Speaks in 3rd person about Andrew
+- Only answers questions related to professional background
+- Provides concise, well-formatted responses
+- Automatically manages conversation history
+
+## 
 
 Creates an optimized production build in the `dist/` directory.
 
@@ -72,6 +100,7 @@ npm run preview
 
 ## Customization
 
+- **Google Generative AI** - AI-powered chat assistant (Gemini API)
 ### Update Personal Information
 
 Edit [src/data.ts](src/data.ts) to update:
