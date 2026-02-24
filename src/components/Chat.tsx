@@ -181,7 +181,7 @@ async function getAIResponse(userMessage: string): Promise<string> {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' });
 
     const systemPrompt = generateSystemPrompt();
     const fullPrompt = `${systemPrompt}\n\nUser Question: ${userMessage}`;
