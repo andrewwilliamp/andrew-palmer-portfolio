@@ -185,12 +185,8 @@ export const ChatWidget = () => {
 
 async function getAIResponse(userMessage: string): Promise<string> {
   try {
-    // In development, use local Express server
-    // In production, Vercel automatically routes /api/* to functions
-    const isDevelopment = !import.meta.env.PROD;
-    const apiUrl = isDevelopment ? 'http://localhost:3001' : '';
-    
-    const response = await fetch(`${apiUrl}/api/chat`, {
+    // Always use relative path - works in both development and production
+    const response = await fetch('/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -199,7 +195,7 @@ async function getAIResponse(userMessage: string): Promise<string> {
     });
 
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
